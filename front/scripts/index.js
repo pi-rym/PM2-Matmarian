@@ -1,14 +1,11 @@
 console.log(tempData);
-//$.get("https://students-api.2.us-1.fl0.io/movies").done((data) => {
-
 // Obtener el contenedor creado en el HTML
 const container = document.querySelector('.container');
 
 // Mapear los objetos en tempData y construir las tarjetas
 //tempData.forEach(movie); {
-    $.get("https://students-api.2.us-1.fl0.io/movies", (movies)=>{
-        movies.forEach((movie) => {
-                  
+    $.get("https://students-api.up.railway.app/movies", (movies)=>{
+        movies.forEach((movie) => {                  
 
     // Crear elementos HTML para la tarjeta
     const card = document.createElement('div');

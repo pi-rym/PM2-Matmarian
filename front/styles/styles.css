@@ -1,167 +1,116 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fff;
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
 }
 
-body {
-    height: 100vh;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.movie-container {
     display: flex;
-    justify-content:center;
-    align-items:self-start;
-    background-image: url(asset/Imágenes\ De\ Fondo\ De\ Películas\ Antiguas\ de\ Pantalla\ Imagen\ para\ Descarga\ Gratuita\ -\ Pngtree.jpg)
+    justify-content: space-around;
+    padding: 100px;
 }
 
-.container {
-    height: 300px;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.card {
-    height: 350px;
-    width: 300px;
+.movie-box {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
     margin: 10px;
-    transition: 330ms;
-    position: relative; /* Agregado para controlar la posición de los elementos hijos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.personaje,
-.personaje_2,
-.personaje_3 {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    background-color: #00a5ec;
-    transition: 300ms;
-    position: absolute;
+/* Estilos básicos para el contenedor de las tarjetas */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 500px; /* Ajusta este valor según tus necesidades */
 }
 
-.imagen_pelicula,
-.imagen_pelicula2,
-.imagen_pelicula_3 {
-    height: 300px; /* Ajustado el tamaño */
+/* Estilos para el contenedor del personaje e imagen */
+.personaje {
+    position: relative;
+}
+
+.imagen_pelicula {
     width: 100%;
-    background-image: url(); /* URL de la imagen */
+    height: 750px; /* Ajusta este valor según tus necesidades */
     background-size: cover;
-    margin-bottom: 10px; /* Ajustado el margen */
-    transition: 300ms;
-    filter: drop-shadow(5px -4px 10px #000);
+    background-position: center;
 }
 
-.detalle,
-.detalle_2,
-.detalle_3 {
-    height: 120px; /* Ajustado el tamaño */
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    margin-top: 200px; /* Ajustado el margen */
-    z-index: 2;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    transition: 300ms;
-}
-/* Añadidos los estilos de hover para las imágenes */
-.card:hover .imagen_pelicula {
-    transform: translateY(-10px);
-    filter: none;
+/* Estilos para los detalles de la película */
+.detalle {
+    padding: 15px;
 }
 
-.card:hover .imagen_pelicula2 {
-    transform: translateY(-10px);
-    filter: none;
-}
-
-.card:hover .imagen_pelicula_3 {
-    transform: translateY(-10px);
-    filter: none;
-}
-
-h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-p {
-    margin: auto;
-    width: 90%;
-    font-size: 12px;
-}
-
-.btn {
-    width: 100px;
-    margin: auto;
-    cursor: pointer;
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    border-radius: 10px; /* Ajustado el radio del borde */
-    font-family: Arial;
-    color: #ffffff;
+.detalle h2 {
+    margin: 0;
+    margin-bottom: 10px;
     font-size: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
 }
 
-.btn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    margin: 4px;
+.detalle p {
+    margin: 0;
+    font-size: 14px;
 }
 
-.logo img{
-    height: 20px;
-    border-radius: 30%;
-    margin-left: 5px;
+/* Estilos para el botón */
+.btn {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 0 0 8px 8px;
+}
+
+.btn h6 {
+    margin: 0;
+    font-size: 16px;
 }
 
 
-.header-content {
-    display: flex;
-    align-items: center;
-    margin-left: 20px; /* Margen izquierdo recomendado */
+@media (max-width: 800px) {
+    .movie-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-box {
+        width: 80%;
+    }
+}
+#iconlogin {
+    display: block; /* Hace que la imagen use todo el ancho disponible, útil si está dentro de un div u otro contenedor en línea */
+    margin: auto; /* Centra la imagen horizontalmente dentro de su contenedor */
+  }
+
+
 }
 
-.logo-img {
-    width: 30em; /* Dimensiones recomendadas para el logo */
-    height: auto; /* Mantener la proporción */
-}
 
-.title {
-    margin-left: 40px; /* Espacio entre el logo y el texto */
-}
-
-h1, h2 {
-    margin: 50;
-    font: size 100px;;
-}
-
-nav {
-    text-align: right; /* Alineación a la derecha */
-}
-
-nav a {
-    margin-right: 80px; /* Espacio entre los enlaces */
-}
