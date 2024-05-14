@@ -3,26 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mi proyecto</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../styles/styles.css" />
+
+    <title>Webs Recomendadas</title>
 </head>
-<body>
-    <header>
-        <h1>Web recomendadas</h1>   
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li> 
-            <li><a href="./about.html">Sobre mi proyecto</a></li>
-            <li><a href="./history.html">Historia del cine</a></li>
-            <li><a href="./recommendations.html">Webs recomendadas</a></li>
-        </ul>
-    </nav>
+<header>
+    <div class="contenedorA">
+        <h2 class="logotipo">Peliculas recomendadas</h2>    
+        <nav>      
+            <a href="../index.html">Inicio</a> 
+            <a href="./about.html">Sobre mi proyecto</a>
+            <a href="./history.html">Historia del cine</a>
+            <a href="./recommendations.html">Webs recomendadas</a>      
+        </nav>
+    </div>    
 </header>
-    <main>
-        <p>Esta es la página sobre Webs recomendadas...</p>
+<body>
+    <main class="">
+  
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="../asset/backdrop.jpg" alt="backdrop">               
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Interstellar (2014)</h5>
+                  <p>Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/casafantamas.jpg" alt="casafantamas">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Cazafantasmas: Imperio helado (2024)</h5>
+                    <p>Después de los eventos de Oklahoma, el equipo de Cazafantasmas regresa a donde comenzó todo: ¡Nueva York! La historia de la familia Spengler continúa con un nuevo grupo de Cazafantasmas.
+                    </p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/El reino del planeta de los simios.jpg" alt="El reino del planeta de los simios">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>El reino del planeta de los simios (2024)</h5>
+                    <p>Ambientada varias generaciones en el futuro tras el reinado de César, en la que los simios son la especie dominante que vive en armonía y los humanos se han visto reducidos a vivir en la sombra. Mientras un nuevo y tiránico líder simio construye su imperio, un joven simio emprende un angustioso viaje que le llevará a cuestionarse todo lo que sabe sobre el pasado y a tomar decisiones que definirán el futuro de simios y humanos por igual.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/El ministerio de la guerra (2024).jpg" alt="El ministerio de la guerra (2024)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>El ministerio de la guerra (2024)</h5>
+                    <p>El ejército británico recluta a un pequeño grupo de soldados de élite para atacar a los nazis detrás de las líneas enemigas durante la Segunda Guerra Mundial.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/Abigail (2024).jpg" alt="Abigail (2024)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Abigail (2024)</h5>
+                    <p>A una banda de delincuentes se les ha encargado secuestrar a Abigail, una bailarina de doce años hija de una poderosa figura del inframundo. Su misión requiere también vigilarla durante la noche para poder cobrar un rescate de 50 millones de dólares. En una mansión aislada, los captores comienzan a desaparecer, uno por uno, y descubren, para su creciente horror, que la pequeña niña con la que están encerrados no es normal y está mostrando su verdadera naturaleza.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/Materia oscura.jpg" alt="Materia oscura (2024)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Materia oscura (2024)</h5>
+                    <p>Jason Dessen acaba en una versión alternativa de su vida. Para volver con su auténtica familia, se embarca en un tortuoso viaje para salvarla del enemigo más aterrador: él mismo.
+                    </p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/Godzilla Minus One (2023).jpg" alt="Godzilla Minus One (2023)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Godzilla Minus One (2023)</h5>
+                    <p>En el Japón de la posguerra surge un nuevo terror. ¿Podrán sobrevivir las personas devastadas... y mucho menos defenderse?</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/Atrapados en el abismo (2024).jpg" alt="Atrapados en el abismo (2024)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Atrapados en el abismo (2024)</h5>
+                    <p>Esta película sigue a personajes de orígenes muy diferentes que se juntan cuando el avión en el que viajan se estrella en el Océano Pacífico. Cuando el avión se detiene peligrosamente cerca del borde de un barranco con los pasajeros y la tripulación atrapados en una bolsa de aire, se produce una lucha de pesadilla por la supervivencia en la que el suministro de aire se agota y los peligros se acercan por todos lados.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../asset/Oppenheimer (2023).jpg" alt="Oppenheimer (2023)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Oppenheimer (2023)</h5>
+                    <p>Película sobre el físico J. Robert Oppenheimer y su papel como desarrollador de la bomba atómica. Basada en el libro 'American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer' de Kai Bird y Martin J. Sherwin.</p>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
+
+
+    <!-- <main class="">
+        <section class="web-recommendations">
+            <h2>Películas Recomendadas</h2>
+
+            <div class="cardsRecommendations">
+                
+                <div class="card-recommendations">
+                    <img src="../asset/dune.jpg" alt="Película 1">
+                    <h3>Dune</h3>
+                    <p>2021</p>
+                </div>
+
+                <div class="card-recommendations">
+                    <img src="../asset/la zona de interes.jpg" alt="Película 2">
+                    <h3>La zona de interes</h3>
+                    <p>2023</p>
+                </div>
+
+                <div class="card-recommendations">
+                    <img src="../asset/los que se quedan.jpg" alt="Película 3">
+                    <h3>Los que se quedan</h3>
+                    <p>2023</p>
+                </div>
+                <div class="w-100"></div>
+
+                <div class="card-recommendations">
+                    <img src="../asset/pelicula sala de profesores.jpg" alt="Película 4">
+                    <h3>Sala de Profesores</h3>
+                    <p>2023</p>
+                </div>
+
+                <div class="card-recommendations">
+                    <img src="../asset/perfect dias.jpg" alt="Película 5">
+                    <h3>Dias Perfecto</h3>
+                    <p>2023</p>
+                </div>
+
+                <div class="card-recommendations">
+                    <img src="../asset/pobre criaturas.jpg" alt="Película 6">
+                    <h3>Pobre Criaturas</h3>
+                    <p>2023</p>
+                </div>
+            </div>
+        </section> -->
     </main>
-    <footer>
+
+    <footer class="footer">
         <p>&copy; 2024 Mi Web de Películas</p>
     </footer>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>   
 </body>
 </html>

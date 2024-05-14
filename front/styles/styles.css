@@ -1,116 +1,332 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-
-header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+  
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.contenedorA {
+	width: 90%;
+	margin: auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+header {
+	padding: 30px 0;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+header .contenedorA {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.movie-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 100px;
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
 }
 
-.movie-box {
-    width: 30%;
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
 }
 
-/* Estilos básicos para el contenedor de las tarjetas */
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 500px; /* Ajusta este valor según tus necesidades */
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
 }
-
-/* Estilos para el contenedor del personaje e imagen */
-.personaje {
-    position: relative;
-}
-
-.imagen_pelicula {
-    width: 100%;
-    height: 750px; /* Ajusta este valor según tus necesidades */
-    background-size: cover;
-    background-position: center;
-}
-
-/* Estilos para los detalles de la película */
-.detalle {
-    padding: 15px;
-}
-
-.detalle h2 {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.detalle p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* Estilos para el botón */
-.btn {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 0 0 8px 8px;
-}
-
-.btn h6 {
-    margin: 0;
+p{
+    color: #fff;
     font-size: 16px;
 }
-
-
-@media (max-width: 800px) {
-    .movie-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .movie-box {
-        width: 80%;
-    }
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../asset/backdrop.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
 }
-#iconlogin {
-    display: block; /* Hace que la imagen use todo el ancho disponible, útil si está dentro de un div u otro contenedor en línea */
-    margin: auto; /* Centra la imagen horizontalmente dentro de su contenedor */
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+}
+
+
+/* Estilos para el contenido principal */
+
+
+
+.info-section h2, .container-section h2 {
+    color: #ffffff;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.card {
+    padding: 20px;
+    width: 450px; /* Ancho de la tarjeta */
+    height: 900px; /* Alto de la tarjeta */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(246, 243, 243);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animación de transición */
+}
+
+.card:hover {
+    transform: scale(1.20); /* Efecto de escala al pasar el cursor */
+}
+
+.card .card-image {
+    width: 100%; /* Ancho de la imagen */
+    height: 450px; /* Alto de la imagen */
+    object-fit: cover;
+}
+
+.card .card-title {
+    color: #080808; /* Color del título */
+    font-size: 20px; /* Tamaño del título */
+    text-align: center; /* Alineación del texto */
+    margin-top: 10px; /* Margen superior */
+}
+
+.card .card-text {
+    color: #080808;; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 2px; /* Margen superior */
+}
+.card .card-director {
+    color: #080808;; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 2px; /* Margen superior */
+}
+.card .card-duration {
+    color: #080808;; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 2px; /* Margen superior */
+}
+.card .card-genre {
+    color: #080808;; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top:2px; /* Margen superior */
+}
+.card .card-rate {
+    color: #080808;; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 2px; /* Margen superior */
+}
+
+.card .card-button{
+    color: #080808;; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    margin-top: 2px; /* Margen superior */
+}
+
+
+* Estilos para el contenido principal web recomendadas */
+.web-recommendations {
+    padding: 20px;
+    background-color: gray;
+    
+}
+
+.web-recommendations h2 {
+    color: #ffffff; /* Color del título */
+    text-align: center;
+}
+
+.cardsRecommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-recommendations {
+   
+    padding: 5px;
+    width: 500px;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(246, 243, 243);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animación de transición */
+
+}
+
+.card-recommendations img {
+    padding: 10px;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    
+}
+
+.card-recommendations,.card-recommendations p {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+.card-recommendations:hover {
+    transform: scale(1.20); /* Efecto de escala al pasar el cursor */
+}
+
+/* Estilos para el pie de página */
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    font-size: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    color: #FFF;
+}
+
+
+/* Estilos para el carousel */
+.carousel {
+    width: 100%; /* Para ocupar todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio inferior */
   }
-
-
-}
-
-
+  .carousel h5{
+    font-size: 60px;
+  }
+  .carousel p{
+    font-size: 25px;
+  }
+  
+  .carousel-item {
+    height: 800px; /* Altura de cada slide */
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Para que la imagen ocupe todo el ancho del carousel */
+    height: 100%; /* Para que la imagen ocupe toda la altura del carousel */
+    object-fit: cover; /* Para ajustar la imagen al tamaño del contenedor manteniendo la proporción */
+  }
+  
+  /* Estilos para los controles de navegación */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Ancho de los controles */
+    top: 50%; /* Posición vertical centrada */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    color: #fff; /* Color de los íconos de navegación */
+  }
+  
+  /* Estilos para los íconos de navegación */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    font-size: 30px; /* Tamaño de los íconos */
+    margin-left: -15px; /* Ajuste de posición horizontal */
+    margin-right: -15px; /* Ajuste de posición horizontal */
+  }
+  
+  /* Estilos para los textos de navegación */
+  .carousel-control-prev,
+  .carousel-control-next {
+    font-size: 20px; /* Tamaño de los textos */
+    text-shadow: none; /* Eliminar sombra de texto */
+  }
+  
