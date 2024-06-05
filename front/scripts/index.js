@@ -1,13 +1,21 @@
 
+const axios = require("axios");
 const renderCards = require('./renderCards');
 
-const fechtMovie = async ()=>{
+const fechtMovie = async () => {
     try {
-        const data = await axios.get("https://students-api.up.railway.app/movies")
-        console.log(data.data);
-        
+        const URL = "http://localhost:3000/movies";
+        const response = await axios.get(URL);
+        const movies = response.data;
+
+        // Verificar si la respuesta es un array de películas
+        if (Array.isArray(movies)) {
+            renderCards(movies);
+        } else {
+            console.error('La respuesta no es un array de películas:', movies);
+        }
     } catch (error) {
-        console.log(error.message);                
+        console.error('Error al obtener las películas:', error.message);
     }
 }
 
