@@ -1,4 +1,4 @@
-const Movie = require("../model/classMovie")
+const Movie = require("../model/Movie")
 const movies = [ {
         "title": "Guardians of the Galaxy Vol. 2",
             "year": 2017,
@@ -42,11 +42,15 @@ const movies = [ {
         }
     ]
     
+
     const moviesService = async () =>{
-        const listMovies = movies.map(movie => new Movie(movie.title, movie.director, movie.poster));
+    //     const listMovies = movies.map(movie => new Movie(movie.title, movie.director, movie.poster));
+
+    const listMovies = await Movie.find();
+
 
     return listMovies;
-      
-};
+
+    }
 
 module.exports = moviesService;
