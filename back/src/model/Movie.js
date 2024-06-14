@@ -45,3 +45,4 @@ const createSchema = new mongoose.Schema({
 const Movie = mongoose.model("Movie", createSchema);
 
 module.exports = Movie; 
+

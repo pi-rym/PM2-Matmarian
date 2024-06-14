@@ -48,9 +48,18 @@ const movies = [ {
 
     const listMovies = await Movie.find();
 
-
     return listMovies;
 
-    }
+    };
 
-module.exports = moviesService;
+    const createMovie = async(movie)=>{
+        const newMovie = new Movie.create(movie);
+        return newMovie;
+
+    };
+
+module.exports = {
+    moviesService,
+     createMovie,
+
+};
